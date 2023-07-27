@@ -4,15 +4,21 @@
         <title>TeeOneBee.xyz</title>
         <style>
             body {
-                background-color: #000000;
+                background-image: url("background.gif");
                 font-family: 'REM', sans-serif;
+                background-repeat: no-repeat;
+                background-color: black;
+                background-position-x: +117px;
+                animation: showBG 3.7s forwards;
             }
             .loading {
                 opacity: 100%;
                 animation: hideDiv 3s forwards;
                 max-width: 600px;
                 max-height: 450px;
+                transform: translate(0,120px);
             }
+
             hidden {
                 opacity: 0%;
                 animation: showDiv 3.7s forwards;
@@ -46,12 +52,22 @@
                     opacity: 100%;
                 }
             }
+            @keyframes showBG {
+                0%,
+                80% {
+                    background-position-y: +600px;
+                }
+                100% {
+                    background-position-y: auto;
+                }
+            }
             .cybhack {
                 transition: 0.5s;
                 display: inline-block;
                 border: 2px solid #b44141;
                 border-radius: 5px;
                 padding: 10px;
+                background-color: #7e3232;
             }
             .cybhack:hover {
                 transform: scale(1.2);
@@ -64,6 +80,7 @@
                 border: 2px solid #0f95e2;
                 border-radius: 5px;
                 padding: 10px;
+                background-color: #126291;
             }
             .telegram:hover {
                 transform: scale(1.2);
@@ -76,6 +93,7 @@
                 border: 2px solid #2BAD72;
                 border-radius: 5px;
                 padding: 10px;
+                background-color: #17573a;
             }
             .zelenka:hover {
                 transform: scale(1.2);
