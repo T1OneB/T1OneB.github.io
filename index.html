@@ -3,6 +3,7 @@
     <head>
         <title>TeeOneBee.xyz</title>
         <meta charset="utf-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1"> 
         <style>
             body {
                 background-image: url("background.gif");
@@ -112,6 +113,128 @@
                 border-radius: 20px;
                 background-color: #288d60;
             }
+            .OTS {
+                font-size: 10px;
+                color: #00000000;
+            }
+            @media(max-width: 1200px){
+                body {
+                    background-image: url("background.gif");
+                    font-family: 'REM', sans-serif;
+                    background-repeat: no-repeat;
+                    background-color: black;
+                    background-position-x: center;
+                    animation: showBG 3.7s forwards;
+                }
+                .loading {
+                    opacity: 100%;
+                    animation: hideDiv 3s forwards;
+                    transform: translate(0,120px);
+                }
+
+                hidden {
+                    opacity: 0%;
+                    animation: showDiv 3.7s forwards;
+                    color: white;
+                }
+                a {
+                    text-decoration: none;
+                    color: rgb(255, 255, 255);
+                }
+                .socials {
+                    border: 2px solid rgba(0, 0, 0, 0);
+                    padding: 60px;
+                    display: inline-block;
+                    border-radius: 40px;
+                    background-color: #2b2b2b88;
+                    box-shadow: 0px 0px 20px #000000;
+                }
+                h1 {
+                    font-size: 128px;
+                }
+                @keyframes hideDiv {
+                    0%,
+                    50% {
+                        opacity: 100%;
+                        max-width: 999px;
+                    }
+                    99% {
+                        opacity: 0%;
+                        max-width: 999px;
+                    }
+                    100% {
+                        opacity: 0%;
+                        max-width: 0px;
+                    }
+                }
+                @keyframes showDiv {
+                    0%,
+                    80% {
+                        opacity: 0%;
+                    }
+                    100% {
+                        opacity: 100%;
+                    }
+                }
+                @keyframes showBG {
+                    0%,
+                    60% {
+                        background-position-y: +6000px;
+                    }
+                    100% {
+                        background-position-y: +1500px;
+                    }
+                }
+                .cybhack {
+                    transition: 0.5s;
+                    display: inline-block;
+                    border: 2px solid #b44141;
+                    border-radius: 20px;
+                    padding: 30px;
+                    background-color: #7e3232;
+                    box-shadow: 0px 0px 80px #b44141;
+                    font-size: 96px;
+                }
+                .cybhack:hover {
+                    transform: scale(1.1);
+                    border-radius: 80px;
+                    background-color: #9c1e1e;
+                }
+                .telegram {
+                    transition: 0.5s;
+                    display: inline-block;
+                    border: 2px solid #0f95e2;
+                    border-radius: 20px;
+                    padding: 30px;
+                    background-color: #126291;
+                    box-shadow: 0px 0px 80px #0f95e2;
+                    font-size: 96px;
+                }
+                .telegram:hover {
+                    transform: scale(1.1);
+                    border-radius: 80px;
+                    background-color: #147bb6;
+                }
+                .zelenka {
+                    transition: 0.5s;
+                    display: inline-block;
+                    border: 2px solid #2bad72;
+                    border-radius: 20px;
+                    padding: 30px;
+                    background-color: #17573a;
+                    box-shadow: 0px 0px 80px #2BAD72;
+                    font-size: 96px;
+                }
+                .zelenka:hover {
+                    transform: scale(1.1);
+                    border-radius: 80px;
+                    background-color: #288d60;
+                }
+                .OTS {
+                    font-size: 50px;
+                    color: #00000000;
+                }
+            }
         </style>
         <link rel="preconnect" href="https://fonts.googleapis.com">
         <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -120,13 +243,15 @@
     <body>
         <center><img src="loading.gif" class="loading"></center>
         <hidden>
-            <center><OTS style="color: black; font-size: 100px;">.</OTS></center>
+            <center><div class="OTS">.</div></center>
+            <center><div class="OTS">.</div></center>
+            <center><div class="OTS">.</div></center>
             <center><h1>MY SOCIALS</h1></center>
             <center><div class="socials">
                 <center><div class="cybhack"><a href="https://cybhack.net/GTXFX">C Y B H A C K</a></div></center>
-                <center><OTS style="color: black; font-size: 1px;">.</OTS></center>
+                <center><div class="OTS">.</div></center>
                 <center><div class="zelenka"><a href="https://zelenka.guru/members/5284864/">Z E L E N K A</a></div></center>
-                <center><OTS style="color: black; font-size: 1px;">.</OTS></center>
+                <center><div class="OTS">.</div></center>
                 <center><div class="telegram"><a href="https://t.me/GTXFX">T E L E G R A M</a></div></center>
             </div></center>
         </hidden>
