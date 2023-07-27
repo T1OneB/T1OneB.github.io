@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>TeeOneBee.xyz</title>
+        <style>
+            body {
+                background-color: #000000;
+                font-family: 'REM', sans-serif;
+            }
+            .loading {
+                opacity: 100%;
+                animation: hideDiv 3s forwards;
+                max-width: 600px;
+                max-height: 450px;
+            }
+            hidden {
+                opacity: 0%;
+                animation: showDiv 3.7s forwards;
+                color: white;
+            }
+            a {
+                text-decoration: none;
+                color: rgb(255, 255, 255);
+            }
+            @keyframes hideDiv {
+                0%,
+                50% {
+                    opacity: 100%;
+                    max-width: 999px;
+                }
+                99% {
+                    opacity: 0%;
+                    max-width: 999px;
+                }
+                100% {
+                    opacity: 0%;
+                    max-width: 0px;
+                }
+            }
+            @keyframes showDiv {
+                0%,
+                80% {
+                    opacity: 0%;
+                }
+                100% {
+                    opacity: 100%;
+                }
+            }
+            .cybhack {
+                transition: 0.5s;
+                display: inline-block;
+                border: 2px solid #b44141;
+                border-radius: 5px;
+                padding: 10px;
+            }
+            .cybhack:hover {
+                transform: scale(1.2);
+                border-radius: 20px;
+                background-color: #9c1e1e;
+            }
+            .telegram {
+                transition: 0.5s;
+                display: inline-block;
+                border: 2px solid #0f95e2;
+                border-radius: 5px;
+                padding: 10px;
+            }
+            .telegram:hover {
+                transform: scale(1.2);
+                border-radius: 20px;
+                background-color: #147bb6;
+            }
+            .zelenka {
+                transition: 0.5s;
+                display: inline-block;
+                border: 2px solid #2BAD72;
+                border-radius: 5px;
+                padding: 10px;
+            }
+            .zelenka:hover {
+                transform: scale(1.2);
+                border-radius: 20px;
+                background-color: #288d60;
+            }
+        </style>
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=REM:wght@300&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <center><img src="loading.gif" class="loading"></center>
+        <hidden>
+            <center><h1>MY SOCIALS</h1></center>
+            <center><div class="cybhack"><a href="https://cybhack.net/GTXFX">C Y B H A C K</a></div></center>
+            <center><OTS style="color: black; font-size: 1px;">.</OTS></center>
+            <center><div class="telegram"><a href="https://t.me.com/GTXFX">T E L E G R A M</a></div></center>
+            <center><OTS style="color: black; font-size: 1px;">.</OTS></center>
+            <center><div class="zelenka"><a href="https://zelenka.guru/lztf">Z E L E N K A</a></div></center>
+        </hidden>
+    </body>
+</html>
