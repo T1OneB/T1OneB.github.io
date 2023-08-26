@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<head>
+    <title>Captcha Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script>
+        function generate_captcha() {
+            let result = '';
+            const characters = 'qwertyuiopasdfghjklzxcvbnmQWERTYUIOPASDFGHJKLZXCVBNM1234567890';
+            const charactersLength = characters.length;
+            let counter = 0;
+            while (counter < 5) {
+            result += characters.charAt(Math.floor(Math.random() * charactersLength));
+            counter += 1;
+            }
+            return result
+        }
+        function check_captcha() {
+            var captcha = document.getElementById ('captcha').innerHTML;
+            var captcha_by_user = document.getElementById("captcha_by_user");
+
+            if (captcha_by_user.value == captcha) {
+                location.reload();
+                alert("Успех!");
+            } else {
+                location.reload();
+                alert("Провал...");
+            }
+        }
+    </script>
+    <style>
+        body {
+            background-color: rgb(10, 10, 10);
+        }
+        t1 {
+            color: rgb(255, 255, 255);
+            text-shadow: 0px 0px 10px rgba(255, 255, 255, 0.411);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 70px;
+        }
+        t3 {
+            color: white;
+            font-family: 'Montserrat', sans-serif;
+            font-size: 40px;
+            -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                    -ms-user-select: none;
+                        user-select: none;
+        }
+        t5 {
+            color: rgb(126, 126, 126);
+            font-family: 'Montserrat', sans-serif;
+            font-size: 15px;
+        }
+        input {
+            border: 2px solid rgb(255, 255, 255);
+            background-color: black;
+            color: white;
+            padding: 15px;
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.3s;
+        }
+        input:hover {
+            background-color: rgb(31, 31, 31);
+        }
+        button {
+            border: 2px solid rgb(255, 255, 255);
+            background-color: black;
+            color: white;
+            padding: 12px;
+            border-radius: 5px;
+            font-size: 20px;
+            text-align: center;
+            font-family: 'Montserrat', sans-serif;
+            transition: 0.3s;
+        }
+        button:hover {
+            transform: scale(1.1);
+            background-color: rgb(163, 211, 148);
+            color: black;
+            border: 2px solid rgb(0, 0, 0);
+        }
+        span {
+            font-size: 40px;
+            color: rgb(10, 10, 10);
+            -webkit-touch-callout: none;
+                -webkit-user-select: none;
+                -khtml-user-select: none;
+                -moz-user-select: none;
+                    -ms-user-select: none;
+                        user-select: none;
+        }
+    </style>
+</head>
+<body onload="document.getElementById('captcha').innerHTML = generate_captcha();">
+    <span>.</span>
+    <center><t1>Captcha Game</t1></center>
+    <span>.</span>
+    <span>.</span>
+    <center><t3 id="captcha">CAPTCHA</t3></center>
+    <span style="font-size: 20px;">.</span>
+    <center><input type="text" name="text" required minlength="5" maxlength="5" value="" id="captcha_by_user" placeholder="Введите каптчу"/></center>
+    <span style="font-size: 20px;">.</span>
+    <center><button onclick="check_captcha()">Отправить</button></center>
+</body>
+</html>
