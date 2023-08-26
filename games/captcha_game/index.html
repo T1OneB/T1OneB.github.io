@@ -1,0 +1,21 @@
+<!DOCTYPE html>
+<head>
+    <title>Captcha Game</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@600&display=swap" rel="stylesheet">
+    <script src="script.js"></script>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body onload="document.getElementById('captcha').innerHTML = generate_captcha();">
+    <span>.</span>
+    <center><t1>Captcha Game</t1></center>
+    <span>.</span>
+    <span>.</span>
+    <center><t3 id="captcha">CAPTCHA</t3></center>
+    <span style="font-size: 20px;">.</span>
+    <center><input type="text" name="text" required minlength="5" maxlength="5" value="" id="captcha_by_user" placeholder="Введите каптчу"/></center>
+    <span style="font-size: 20px;">.</span>
+    <center><button onclick="check_captcha()">Отправить</button></center>
+</body>
+</html>
